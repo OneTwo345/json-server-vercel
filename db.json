@@ -17,6 +17,12 @@
           "name": "Heels"
       }
   ],
+  "carts": [
+      {
+          "id": 1,
+          "name": "Sneakers"
+      }
+  ],
   "companies": [
       {
           "value": "Nike",
