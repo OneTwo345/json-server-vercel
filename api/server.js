@@ -1,5 +1,8 @@
 // See https://github.com/typicode/json-server#module
 const jsonServer = require("json-server");
+const cors = require("cors");
+
+// import cors from "cors";
 
 const server = jsonServer.create();
 
@@ -24,6 +27,9 @@ server.use(
     "/blog/:resource/:id/show": "/:resource/:id",
   })
 );
+
+server.use(cors({ origin: "*" }));
+
 server.use(router);
 server.listen(3000, () => {
   console.log("JSON Server is running");
